@@ -1,0 +1,13 @@
+[Unit]
+Description=KMonad keyboard remapping daemon
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/kmonad /home/zen/kmonad/mac.kbd
+Restart=always
+RestartSec=2
+User=root
+
+[Install]
+WantedBy=multi-user.target
