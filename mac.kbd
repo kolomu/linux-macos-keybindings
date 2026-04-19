@@ -1,0 +1,13 @@
+(defcfg
+  input  (device-file "/dev/input/event18")
+  output (uinput-sink "kmonad-output")
+  fallthrough true
+)
+
+(defsrc
+  lalt lmeta space
+)
+
+(deflayer mac
+  lmeta lalt space
+)
